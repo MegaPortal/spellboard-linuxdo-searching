@@ -1,0 +1,34 @@
+{
+    "name": "Linux.do forum content searcher",
+    "description": "Search for content on the Linux.do forum.",
+    "intents": [
+        {
+            "name": "search_linux_do",
+            "description": "Search for content on the Linux.do forum with a term.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "term": {
+                        "type": "string",
+                        "description": "The term to search for."
+                    }
+                },
+                "required": [
+                    "term"
+                ]
+            },
+            "async": true,
+            "link": "/?term={term}",
+            "example": "/?term=intents",
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "response": {
+                        "type": "string",
+                        "description": "The response from the Linux.do forum."
+                    }
+                }
+            }
+        }
+    ]
+}
